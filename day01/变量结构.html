@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+变量的结构赋值
+    1.数组结构赋值的时候不能使用字符串
+    数组结构通过下标来进行解构的
+    -->
+
+</body>
+<script>
+    const F3 = ['李四', '胡歌', '张三', '王五']
+    let [a, b, c, d] = F3
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    const OBJ = {
+        name: '',
+        age: 22,
+        call: function () {
+            console.log(呜呜呜);
+        }
+    }
+    let { name, age, call } = OBJ
+    console.log(name);
+    console.log(age);
+    console.log(call);
+    // let { call } = xiao
+    // xiao()
+</script>
+
+</html>

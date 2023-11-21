@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h3>点击切换颜色</h3>
+<div ></div>
+<div ></div>
+<div ></div>
+
+<body>
+
+</body>
+<script>
+    {
+        // console.log(name);  //变量未初始化   作用域决定了变量与函数的可访问范围，即作用域控制着变量与函数的可见性和生命周期
+        let name = "18岁了"
+        console.log(name);
+    }
+    let name = "ddd"
+    console.log(name, '2');
+
+    let box = document.getElementsByTagName('div')
+    for (let i = 0; i < box.length; i++) {
+        box[i].addEventListener('click', function () {
+            box[i].style.backgroundColor = 'blue'
+         
+        })
+    }
+</script>
+
+</html>
+<style>
+    div {
+        float: left;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+        background-color: pink;
+        border: 1px solid #ccc;
+    }
+</style>

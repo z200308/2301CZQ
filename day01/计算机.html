@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="./jquery.js"></script>
+</head>
+
+<body>
+    <h1>一个简单的计算机</h1>
+    <div class="box">
+        <input type="text" name="" id="txt">
+        <button onclick="num(this.innerText)">1</button>
+        <button onclick="num(this.innerText)">2</button>
+        <button onclick="num(this.innerText)">3</button>
+        <button onclick="result()">=</button>
+        <button onclick="del()">删除</button>
+        <button onclick="num(this.innerText)">+</button>
+        <button onclick="num(this.innerText)">4</button>
+        <button onclick="num(this.innerText)">5</button>
+        <button onclick="num(this.innerText)">6</button>
+        <button onclick="Clear()">Back</button>
+        <button onclick="num(this.innerText)">-</button>
+        <button onclick="num(this.innerText)">7</button>
+        <button onclick="num(this.innerText)">8</button>
+        <button onclick="num(this.innerText)">9</button>
+        <button onclick="back()">C</button>
+        <button onclick="num(this.innerText)">*</button>
+        <button onclick="num(this.innerText)">0</button>
+        <button onclick="num(this.innerText)">0</button>
+        <button onclick="num(this.innerText)">.</button>
+        <button onclick="num(this.innerText)">/</button>
+
+
+        <!-- <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>=</button>
+        <button>+</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>Back</button>
+        <button>-</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>c</button>
+        <button>*</button>
+        <button>0</button>
+        <button>0</button>
+        <button>.</button>
+        <button>/</button> -->
+    </div>
+</body>
+
+</html>
+<script>
+    // var txt=document.getElementById('txt')
+    // var btn=document.getElementsByTagName('button')
+    //     btn[i].onclick = function() {
+    //         if (this.innerHTML=='C') {
+    //             txt.innerHTML=''
+    //         }else if (this.innerHTML=='=') {
+    //             txt.innerHTML=eval(txt.innerHTML)
+    //         }else{
+    //             txt.innerHTML+=this.innerHTML
+    //         }
+    //     }
+
+
+    var txt = document.getElementById('txt')
+    function num(e) {
+        txt.value += e
+    }
+    function result() {
+        txt.value = eval(txt.value)
+    }
+    function Clear() {
+        txt.value = ''
+    }
+    function back() {
+        txt.value = txt.value.slice(0, txt.value.length - 1)
+    }
+    function del(){
+        txt.value=''
+    // console.log(del);
+    }
+</script>
+<style>
+    .box {
+        width: 300px;
+        border: 2px solid #000;
+        padding: 20px;
+
+    }
+    input {
+        text-align: right;
+        width: 295px;
+        height: 56px;
+        font-size: 39px;
+    }
+    button {
+        width: 17%;
+        height: 50px;
+        margin: 6px 1px;
+        /* border-radius: 10px; */
+    }
+</style>

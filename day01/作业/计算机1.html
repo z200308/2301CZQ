@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery.js"></script>
+</head>
+
+<body>
+    <h3>一个简单的计算机</h3>
+    <div class="box">
+        <input type="text" id="txt">
+        <button onclick="self()">%</button>
+        <button onclick="num(this.innerText)">1</button>
+        <button onclick="num(this.innerText)">2</button>
+        <button onclick="num(this.innerText)">3</button>
+        <button onclick="ser()">=</button>
+
+        <button onclick="num(this.innerText)">+</button>
+        <button onclick="num(this.innerText)">4</button>
+        <button onclick="num(this.innerText)">5</button>
+        <button onclick="num(this.innerText)">6</button>
+        <button onclick="back()">Back</button>
+        <button onclick="num(this.innerText)">-</button>
+        <button onclick="num(this.innerText)">7</button>
+        <button onclick="num(this.innerText)">8</button>
+        <button onclick="num(this.innerText)">9</button>
+        <button onclick="cles()">C</button>
+        <button onclick="num(this.innerText)">*</button>
+
+        <button onclick="num(this.innerText)">0</button>
+        <button onclick="num(this.innerText)">.</button>
+        <button onclick="num(this.innerText)">/</button>
+    </div>
+</body>
+
+</html>
+<script>
+    var txt = document.getElementById('txt')
+    function num(e) {
+        txt.value += e
+
+    }
+    function back() {
+        txt.value = ''
+    }
+    function ser() {
+        txt.value = eval(txt.value)  //eval是Python的一个内置函数，这个函数的作用是，返回传入字符串的表达式的结果。即变量赋值时，等号右边的表示是写成字符串的格式，返回值就是这个表达式的结果。
+// eval（)函数用来执行一个字符串表达式，并返回表达式的值，还可以把字符串转化为list、tuple、dict。eval函数的语法：eval（expression[，globals[，locals]])。如果eval函数在执行时遇到错误，则抛出异常给调用者；类似的函数是loadcode，loadcode并不立即执行代码，而是返回一个函数对象。并且loadcode支持路径参数，eval并不支持，eval并不支持代码中的return语句，而是将代码作为表达式直接计算出结果
+    }
+    function cles() {
+        txt.value = txt.value.slice(0, txt.value.length - 1)
+    }
+    function self(){
+        txt.value=''
+    }
+
+</script>
+<style>
+    .box {
+        width: 300px;
+        height: 450px;
+        border: 2px solid #000;
+        padding: 20px;
+    }
+
+    input {
+        width: 300px;
+        height: 50px;
+        text-align: right;
+        font-size: 20px;
+    }
+
+    button {
+        width: 17%;
+        height: 52px;
+        margin: 9px 2px;
+    }
+</style>
