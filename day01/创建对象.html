@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //工厂模式
+    function fn(a, b) {
+        let obj = new Object()
+        obj.a = a
+        obj.b = b
+        return obj
+    }
+    const test = fn(1, 2)
+    //构造函数
+    function Fn(a, b) {
+        this.a = a
+        this.b = b
+        this.c = function () {
+            console.log(this.a);
+        }
+    }
+    let test1 = new Fn(1, 2)
+    let test2 = new Fn(1, 2)
+    console.log(test1.c == test2.c);
+//     优点: new隐式创建对象，写法简洁
+// 缺点:构造函数定义的方法会在每个实例上都要创建一遍除非该方法声明提到全局)
+</script>
+
+</html>

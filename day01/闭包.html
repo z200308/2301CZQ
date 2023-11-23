@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //闭包的写法
+        //必报的特点
+        //1.函数嵌套函数2.有返回值，返回值一定是一个函数
+        //函数嵌套函数，返回一个回调函数
+        // function person() {
+        //     let name = 'pitter'
+        //     return function displayname() {
+        //         console.log(name);
+        //     }
+        // }
+        // let peter = person()
+        // peter()
+        //
+        function p() {
+            let cout = 0
+            return function () {
+                return ++cout
+            }
+        }
+        let result = p()
+        console.log(result());
+        console.log(result());
+        console.log(result());
+    </script>
+</body>
+
+</html>
