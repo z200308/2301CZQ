@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>定时器示例</title>
+</head>
+<body>
+  <h1>简单计时器</h1>
+  <p id="timer">0 秒</p >
+  <button id="start">开始</button>
+  <button id="pause">暂停</button>
+  <button id="reset">重置</button>
+
+  <script>
+    // 获取DOM元素
+    const timerElement = document.getElementById('timer');
+    const startButton = document.getElementById('start');
+    const pauseButton = document.getElementById('pause');
+    const resetButton = document.getElementById('reset');
+
+    let timer; // 用于存储定时器引用
+    let seconds = 0; // 计时秒数
+
+    function updateTimer() {
+      timerElement.textContent = seconds + ' 秒';
+    }
+
+    function startTimer() {
+      timer = setInterval(function () {
+        seconds++;
+        updateTimer();
+      }, 1000); // 每秒更新一次
+    }
+
+    function pauseTimer() {
+      clearInterval(timer);
+    }
+
+    function resetTimer() {
+      clearInterval(timer);
+      seconds = 0;
+      updateTimer();
+    }
+
+    startButton.addEventListener('click', startTimer);
+    pauseButton.addEventListener('click', pauseTimer);
+    resetButton.addEventListener('click', resetTimer);
+  </script>
+</body>
+</html>

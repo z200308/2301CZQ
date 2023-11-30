@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    const map = new Map([
+        ['name', '孙菲菲'],
+        ['title', '和v学生']
+    ])
+    console.log(map.size);
+    map.has('name')
+    map.set('sdsq', 'dddddddd')   //字符添加
+    console.log(map.delete('name'));  //删除
+    console.log(map);
+
+    //set数组
+    let arr = new Set([3, 4, 5, 6, 7, 8, 9, 2, 5, 4])
+    console.log(arr);
+    console.log(arr.size);
+    arr.has([])
+    arr.add([445, 33, 55, 55, 445])
+    console.log(arr.delete([9]));
+    console.log(arr);
+    // console.log(set.arr.add([445, 33, 55, 55, 445]));
+</script>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        console.log(Number('11'));
+        console.log(Number('你好'));
+        console.log(Number(true));  //0
+        console.log(Number(false)); //1
+        console.log(Number(null));  ///0
+        console.log(Number(undefined));  //Nan
+        let time = new Date()
+        console.log(time);
+        console.log(Number(time));
+
+        //parseInt 取整 两个参数、
+        console.log(parseInt('10.9'));
+        console.log(parseInt('10.9hhhh'));
+        console.log(parseInt('0109ghh'));
+        console.log(parseInt('10x.9'));
+
+// typeof   instanceof
+
+        //parseFloat  取整两个参数
+        console.log(parseInt('10.9'));
+        console.log(parseInt('10.9hhhh'));
+        console.log(parseInt('0109ghh'));
+        console.log(parseInt('10x.9'));
+        console.log(Number('10x.9'), 'Number');
+        //
+        //作用域
+        let a = '你好'
+    </script>
+</body>
+
+</html>

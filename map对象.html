@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //写一个吗map对象
+    const map = new Map([
+        ['name', '小猴'],
+        ['title', '533']
+    ])
+
+
+    // map.delete.name
+    console.log(map.delete('name'));  //删除
+    console.log(map);
+    console.log(map.has('name'));
+    map.set('[999]', 'yyy')  
+    map.has('title')
+    console.log(map);
+    map.get('name')
+    // console.log(map.get('name'));
+  console.log(map.size);  //长度
+    // console.log();
+
+
+    ///set 数组  arr.size arr.add  arr.delete arr.has  
+    let arr = new Set([2, 3, 456, 67, 88, 456, 54])
+    console.log(arr);
+
+    ///class类
+    function P(a, b) {
+        this.a = a
+        this.b = b
+    }
+    P.prototype.toString = function () {
+        return this.a + this.b
+    }
+    var B = new P(1, 2)
+    console.log(1, 2);
+    //类的写法
+    class p {
+        constructor(a, b) {
+            this.a = a
+            this.b = b
+        }
+        toString() {
+            return this.a + this.b
+        }
+    }
+    var P = new P(1, 2)
+
+//合并对象
+    let obj = { name: '111' }
+    let obj2 = { name: '111' }
+    Object.assign(name)
+    console.log(obj);
+</script>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3></h3>
+    <div class="b">
+        <span id="shop"></span>
+    </div>
+    <div class="box">
+        <button onclick="jkk()">开始</button>
+        <button onclick="end()">结束</button>
+    </div>
+    <script>
+        var arr = ['张三', '李四', '王五', '赵六', '鲁班', '李白', '桩基', '阿德', '武则天', '萨维', '西施', '杨玉环', '貂蝉', '摇', '王昭君', '小福', '阿狸', '公孙离', '甄姬', '孙悟空', '杨灿有 ',
+            '吴京', '吾人', '']
+        var shop = document.getElementById('shop')
+        var interval
+        function jkk() {
+            interval = setInterval(function () {
+                var number = Math.random() * (arr.length - 1)
+                number = Math.round(number)
+                document.getElementById('shop').innerHTML = arr[number]
+            }, 10)
+        }
+        function end() {
+            clearInterval(interval)
+        }
+        setInterval(fn, 1000);
+        function fn() {
+            var date = new Date();
+            var year = date.getFullYear();   //获取年份
+            var month = date.getMonth() + 1;  //获取月份 + 1
+            var dates = date.getDate();        //获取日
+            var hour = date.getHours();      //获取小时
+            var minute = date.getMinutes();   //获取分钟
+            var second = date.getSeconds();  //获取秒
+            var h3 = document.querySelector('h3');
+            h3.innerHTML = year + '-' + month + '-' + dates + ' ' + hour + ':' + minute + ':' + second;
+        }
+        fn();
+    </script>
+</body>
+
+</html >

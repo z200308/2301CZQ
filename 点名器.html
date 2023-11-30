@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<table>
+    <tr>
+
+    </tr>
+</table>
+
+<body>
+    <h3>点名</h3>
+    <!-- <table>
+        <tr>
+            <td>张三</td>
+            <td>王五</td>
+            <td>赵六</td>
+            <td>李四</td>
+            <td>李白</td>
+            <td>小虎</td>
+        </tr>
+        <tr>
+            <td>小福</td>
+            <td>王五</td>
+            <td>阿德</td>
+            <td>萨维</td>
+            <td>王昭君</td>
+            <td>大神</td>
+        </tr>
+        <tr>
+            <td>武则天</td>
+            <td>王五</td>
+            <td>杨玉环</td>
+            <td>摇</td>
+            <td>武则天</td>
+            <td>公孙离</td>
+        </tr>
+    </table> -->
+    <div class="di" id="shop">
+
+    </div>
+    <!-- <ul>
+        <li>
+
+        </li>
+    </ul> -->
+    <div class="bt">
+        <button>点名</button>
+
+        <!-- <button onclick="start()">两个</button>
+        <button onclick="StaticRange()">三个</button>
+         -->
+        <button>结束</button>
+    </div>
+
+    <script>
+        var arr = ['张三', '李四', '王五', '赵六', '鲁班', '李白', '桩基', '阿德', '武则天', '萨维', '西施', '杨玉环', '貂蝉', '摇', '王昭君', '小福', '阿狸', '公孙离', '甄姬', '孙悟空']
+        // var arr1 = ['张三', '李四', '王五', '赵六', '鲁班', '李白', '桩基', '阿德', '武则天', '萨维', '西施', '杨玉环', '貂蝉', '摇', '王昭君', '小福', '阿狸', '公孙离', '甄姬', '孙悟空']
+        // var arr2 = ['张三', '李四', '王五', '赵六', '鲁班', '李白', '桩基', '阿德', '武则天', '萨维', '西施', '杨玉环', '貂蝉', '摇', '王昭君', '小福', '阿狸', '公孙离', '甄姬', '孙悟空']
+
+        // var interval
+        // function startName() {
+        //     interval = setInterval(function () {
+        //         var number = Math.random() * (arr.length - 1)
+        //         number = Math.round(number)
+        //         document.getElementById('shop').innerHTML = arr[number]
+
+        //     }, 10)
+        // }
+        var btn = document.getElementsByClassName('button')
+        var shop = document.getElementById('shop')
+        shop.innerHTML = arr[0]
+        var timer = null
+        btn[0].onclick = function () {
+            timer = setInterval(function () {
+                var random = Math.random(Math.random() * arr.length)
+                shop.innerHTML = arr[random]
+            }, 30)
+        }
+        btn[1].onclick = function () {
+            clearInterval(timer)
+        }
+// btn[3].onclick = function() {
+    
+// }
+    </script>
+</body>
+
+</html>
